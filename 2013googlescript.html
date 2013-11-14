@@ -1,0 +1,79 @@
+<!-- @include _header -->
+
+      <section class="content">
+        <section class="articles">
+<p></p>
+  I've recently bumped my way into marketing.  Whilst doing some design tasks for a client and looking for ways to simplified tedious tasks, I've decided to google script a try.
+
+<p></p>
+  What needs to be done is basically transferring data (contact info) from a spreadsheet onto a google doc (letter).
+
+<pre class="prettyprint" font-size="10px">
+function createExpiredListingLetter() {
+  var templateid = "0AvFccKClO9WgdEFEeHp0N3dCRzRTMUUtQlBVZzV4ZWc";
+  var sheet = SpreadsheetApp.openById(templateid);
+  var data = sheet.getSheetByName("listing").getRange("B3:L5").getValues();
+  var date = "November 14, 2013";
+  var ii = 0;
+
+  for (ii in data) {
+    createOneLetter(data[ii], date);
+  }
+}
+
+function createOneLetter(row, date) {
+  var FNAME = 0;
+  var MNAME = 1;
+  var LNAME = 2;
+  var MADDRESS = 3;
+  var MADDRESS2 = 4;
+  var PADDRESS = 5;
+  var PADDRESS2 = 6;
+  var DISTRICT = 7;
+  var AREA = 8;
+  var TYPE = 9;
+  var MOTIVATION = 10;
+  var CURRENT_MONTH = 'October 2013';
+  var idx = 0;
+
+  var doc = DocumentApp.create(Utilities.formatString('letter_to_%s',row[LNAME]));
+  var file = DocsList.getFileById(doc.getId());
+  file.removeFromFolder(DocsList.getRootFolder());
+  file.addToFolder(DocsList.getFolder("Work"));
+
+  var body = doc.getBody();
+  var today = body.insertParagraph(0, date);
+  today.setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+  today.setFontFamily(DocumentApp.FontFamily.ARIAL);
+
+  if (row[idx++] != "") {
+    body.insertParagraph(idx++, Utilities.formatString('\n%s %s %s\n%s\n%s', row[FNAME], row[MNAME], row[LNAME], row[MADDRESS], row[MADDRESS2]));
+  } else {
+      body.insertParagraph(idx++, Utilities.formatString('%s %s\n%s\n%s', row[FNAME], row[LNAME], row[MADDRESS], row[MADDRESS2]));
+  }
+
+  var dear = body.insertParagraph(idx++, Utilities.formatString('\nDear %s,', row[FNAME]));
+  dear.setFontFamily(DocumentApp.FontFamily.ARIAL);
+
+...
+</pre>
+
+<p></p>
+It's very much like a filesystem protocol, files objects are referenced by id, and data can accessed via Google's wire protocol between doc, spreadsheet, and other google gadgets, exactly like transferring data between clients and servers.  All the authentications, APIs, synchronizations are taken care of, key id for the object are easily retrievable from the link.
+
+<p></p>
+If you use c, it has formatString for sprintf, Logger for printf, ability to hold an array of objects, but note that in a for loop, it automatically updates index.  In addition, the Utilities object is similar to the standard library which allows easy data manipulations, cDataSet acts as an abstraction to encapsulate object type, and is great for accessing any data, very much like void*.
+
+<p></p>
+Even though not as powerful, it compensated with html supports. We can set font size and family, color, etc, which makes pretty formatting a piece of cake.
+
+<p></p>
+The compiler is very basic though, it yells at you one error at a time.
+
+<p></p>
+The verdict: while performance is not great, it's a versatile solutions to format data in a reasonable-sized database.
+        </section>
+      </section>
+
+
+<!-- @include _footer -->

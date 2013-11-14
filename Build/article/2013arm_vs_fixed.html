@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+  <link rel='stylesheet' href='../css/normalize.css'>
+<link rel='stylesheet' href='../css/style.css'>
+  <script src='../js/jquery-1.8.3.min.js'></script>
+<script src='../js/app.js'></script>
+
+  <link href="../favicon.ico" rel="shortcut icon">
+  <link href="../apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="prettify.js"></script>
+  <title>Kalai Wei</title>
+
+</head>
+
+<body>
+    <div class = "wrap">
+      <header>
+        <section class="profile">
+          <h1 class="name"><a href="/">Kalai Wei</a></h1>
+          <div class="bio">
+            Baker + painter + system <br>
+            engineer venturing into <br>
+            Objective-C and Ruby.<br>
+            My life consists of many <br>
+            awkward silly moments.<br>
+            <a class="picture" href="/"><img src="assets/profile_picture.png"></a>
+            <div class="icons">
+              <a href="http://www.github.com/ikiwi"><img src="assets/github@2x.png"></a>
+              <a href="all.html"><img src="assets/blog@2x.png"></a>
+              <a href="resume.html"><img src="assets/resume@2x.png"></a>
+              <p class="details">github blog resume</p>
+            </div>
+          </div>
+        </section>
+      </header>
+
+      <section class="content">
+        <section class="articles">
+
+If you are planning whether to get ARM or conventional fixed mortgage, you need to decide now or forever hold your peace.  The reason is that ARM will go away next year.
+<p></p>
+Banks now requires to hold 20% of their mortgage, the process are more scrutinized, causing the mortgaget to be harder to obtain.  But if you do have enough cash, you can increase your chance of getting approved with more downpayments, or even throw in an all-cash offer and then refinance at your spare time.
+<p></p>
+Offering interest rates of 3-4%, next year going forward bank will need to confirm that buyers can afford the ARM rate + whatever the rate will be afterwards (~5/6%).  Bank has always been known for maximizing its profit (except the case for some banks after 2008 when they listened to the government).  Because of that, points are great for banks, and so was ARM.  The new policy left banks with no incentives to offer the discounted ARM and everything to push 30 year fix.
+<p></p>
+With choices diminishing, lending is not getting easier.  But as a successful hedgefund manage says, there are always opportunities no matter how bad the situation is.
+
+        </section>
+      </section>
+
+    </div>
+  </body>
+</html>
