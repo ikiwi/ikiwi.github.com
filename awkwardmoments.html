@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
+
         <!-- Hammer reload -->
           <script>
             setInterval(function(){
@@ -15,11 +15,11 @@
                 ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
                 ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
                 ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
                       link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
                     }
                   }
@@ -28,7 +28,7 @@
             }, 1000)
           </script>
         <!-- /Hammer reload -->
-      
+
 
   <link rel='stylesheet' href='css/normalize.css'>
 <link rel='stylesheet' href='css/style.css'>
@@ -69,7 +69,7 @@
         <a href="all.html">all</a> |
         <a href="tech.html">tech</a> |
         <a href="re.html">real estate</a> |
-        <a class="current current current current current current current highlighted" href="awkwardmoments.html">life</a>
+        <a class="highlighted" href="awkwardmoments.html">life</a>
         <section class="articles">
           <ul>
             <li>Oct 2013 <a href="2013curd.html">Deconstructed Fruit Pie</a></li>

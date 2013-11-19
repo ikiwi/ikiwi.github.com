@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
+
         <!-- Hammer reload -->
           <script>
             setInterval(function(){
@@ -15,11 +15,11 @@
                 ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
                 ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
                 ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
                       link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
                     }
                   }
@@ -28,7 +28,7 @@
             }, 1000)
           </script>
         <!-- /Hammer reload -->
-      
+
 
   <link rel='stylesheet' href='css/normalize.css'>
 <link rel='stylesheet' href='css/style.css'>
@@ -67,9 +67,9 @@
 
       <section class="content">
         <section class="articles">
-I thought of this whenever I walk by a gym. This recipe double as an arm exercise, the curd is done when your feel like your arm is about to fall off.
+I thought of this whenever I walked by a gym. This recipe could probably double as an arm exercise, because you can tell that the curd is done when your arm feel like it's about to fall off.
 <p></p>
-Curd is a citrus dessert, and the base can be any kind of citrusy fruits such as lemon or berry.  The proportions need to adjust though.  To soften the flavor down, I used more butter when lemon base, and it's easier to make the curd consistency because lemon has higher acidicity which helps solidify the mixture a little better than berries.  For a little-healthier alternative, berry curd comes out surprisingly nice.
+Curd is a citrus dessert, and the base can be any kind of citrusy fruits such as lemon or berry.  The proportions need to adjust though, depending on the level of acidity.  Lemon has higher acidity, which helps solidify the mixture a little better than berries.  And to soften the flavor down, I use more butter with lemon base.  For a little-healthier alternative, berry curd comes out surprisingly nice.
 <p></p>
 <ul>Ingredients:
 <li>160g lemon juice</li>
