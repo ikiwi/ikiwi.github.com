@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
+
         <!-- Hammer reload -->
           <script>
             setInterval(function(){
@@ -15,11 +15,11 @@
                 ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
                 ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
                 ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
                       link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
                     }
                   }
@@ -28,7 +28,7 @@
             }, 1000)
           </script>
         <!-- /Hammer reload -->
-      
+
 
   <link rel='stylesheet' href='css/normalize.css'>
 <link rel='stylesheet' href='css/style.css'>
@@ -58,46 +58,25 @@
             <div class="icons">
               <a href="http://www.github.com/ikiwi"><img src="assets/github@2x.png"></a>
               <a href="all.html"><img src="assets/blog@2x.png"></a>
-              <a class='current current current current current current current current' href="resume.html"><img src="assets/resume@2x.png"></a>
+              <a href="resume.html"><img src="assets/resume@2x.png"></a>
               <p class="details">github blog resume</p>
             </div>
           </div>
         </section>
       </header>
-<section class="content">
-  <section class="articles">
-    <ul>education
-      <li>Polytechnic Institute of NYU</li>
-      <li>MS/BS in Computer Science</li>
-    </ul>
-    <p></p>
-    <ul>skills
-      <li>Programming Languages: C/C++, Perl, Shell scripts, objective-C, Ruby</li>
-      <li>Software: VMware ESX, vSphere, Virtual Center, xcode</li>
-      <li>Operating Systems: Linux, Windows, UNIX</li>
-    </ul>
-    <p></p>
-    <ul>experience
-      <ul>kernel developer @Violin Memory - Mountain View, CA
-        <li>developed block-level virtualization solutions (VAAI)</li>
-        <li>evaluated snapshot, replication, and deduplication performance</li>
-      </ul>
-      <p></p>
-      <ul>protocol engineer @NetApp - Sunnyvale, CA
-        <li>managed product release</li>
-      </ul>
-      <p></p>
-      <ul>storage developer @EMC Corporation - Soutboro, MA
-        <li>developed file-level virtualization solutions (VAAI)</li>
-      </ul>
-      <p></p>
-      <ul>infrastructure developer @EMC Corporation - South Plainfield, NJ
-        <li>developed internal tools (gdb), scripts, and infrastructure solutions</li>
-      </ul>
-      </ul>
-    </div>
-  </section>
-</section>
+
+      <section class="content">
+        <a href="all.html">all</a> |
+        <a href="tech.html">tech</a> |
+        <a href="re.html">real estate</a> |
+        <a class="current current highlighted" href="awkwardmoments.html">life</a>
+        <section class="articles">
+          <ul>
+            <li>Oct 2013 <a href="2013curd.html">Deconstructed Fruit Pie</a></li>
+            <li>Jul 2013 <a href="2013bday.html">Surprise Birthday Party</a></li>
+          </ul>
+        </section>
+      </section>
 
     </div>
   </body>

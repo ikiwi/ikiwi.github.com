@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
+
         <!-- Hammer reload -->
           <script>
             setInterval(function(){
@@ -15,11 +15,11 @@
                 ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
                 ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
                 ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link'); 
-                    for (var i = 0; i < links.length;i++) { 
-                    var link = links[i]; 
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
                       link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
                     }
                   }
@@ -28,7 +28,7 @@
             }, 1000)
           </script>
         <!-- /Hammer reload -->
-      
+
 
   <link rel='stylesheet' href='css/normalize.css'>
 <link rel='stylesheet' href='css/style.css'>
@@ -65,17 +65,17 @@
         </section>
       </header>
 
-      <section class="content">
-        <a href="all.html">all</a> |
-        <a href="tech.html">tech</a> |
-        <a class="current current current current current current current highlighted" href="re.html">real estate</a> |
-        <a href="awkwardmoments.html">life</a>
-        <section class="articles">
-          <ul>
-            <li>Nov 2013 <a href="2013arm_vs_fixed.html">ARM or Fixed: The Dilemma is Ending</a></li>
-          </ul>
-        </section>
-      </section>
+<section class="content">
+  <section class="articles">
+    My first surprise birthday party where I surprised my guests.<p></p>
+    So on my birthday I was supposed to have dinner in Foster City with a few girlfriends.  My other friends were planning a surprise party for me so they were trying to keep me in SF.  They told me some ridiculous amount of time to wait in SF, but coincidentally it was during the Bart strike, so I bought in.  I ended up eating out at Zarzuela.
+    <p></p>
+    While I was eating, they sneaked into my roofdeck, brought wines, food, people, party gear, the whole nine yards.  Whilst they were having a pre-party upstairs, my then-roommate was responsible to deliver me blind-folded in an uber.  But as soon as I landed in front of my building, I heard the key fob beeped the entrance door, and then heard the familiar elevator noise, etc.  He gave up.
+    <p></p>
+    So I undid the blind-fold, eager to see what's happening, walked up to the my friends, and said "hello~"... and turned my surprise party into a surprised party.
+    <p></p>
+  </section>
+</section>
 
     </div>
   </body>

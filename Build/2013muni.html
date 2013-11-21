@@ -58,44 +58,22 @@
             <div class="icons">
               <a href="http://www.github.com/ikiwi"><img src="assets/github@2x.png"></a>
               <a href="all.html"><img src="assets/blog@2x.png"></a>
-              <a class='current current current current current current current current' href="resume.html"><img src="assets/resume@2x.png"></a>
+              <a href="resume.html"><img src="assets/resume@2x.png"></a>
               <p class="details">github blog resume</p>
             </div>
           </div>
         </section>
       </header>
+
 <section class="content">
   <section class="articles">
-    <ul>education
-      <li>Polytechnic Institute of NYU</li>
-      <li>MS/BS in Computer Science</li>
-    </ul>
+    My first ios app is attributed to a boy.
     <p></p>
-    <ul>skills
-      <li>Programming Languages: C/C++, Perl, Shell scripts, objective-C, Ruby</li>
-      <li>Software: VMware ESX, vSphere, Virtual Center, xcode</li>
-      <li>Operating Systems: Linux, Windows, UNIX</li>
-    </ul>
+    It allows users to look up and save bus (muni) route in SF, get real time update for up to 5 consequetive muni, and set alarm so that they don't miss the time.  The alarm time also adjusts continuously as estimated arrival time changes.
     <p></p>
-    <ul>experience
-      <ul>kernel developer @Violin Memory - Mountain View, CA
-        <li>developed block-level virtualization solutions (VAAI)</li>
-        <li>evaluated snapshot, replication, and deduplication performance</li>
-      </ul>
-      <p></p>
-      <ul>protocol engineer @NetApp - Sunnyvale, CA
-        <li>managed product release</li>
-      </ul>
-      <p></p>
-      <ul>storage developer @EMC Corporation - Soutboro, MA
-        <li>developed file-level virtualization solutions (VAAI)</li>
-      </ul>
-      <p></p>
-      <ul>infrastructure developer @EMC Corporation - South Plainfield, NJ
-        <li>developed internal tools (gdb), scripts, and infrastructure solutions</li>
-      </ul>
-      </ul>
-    </div>
+    The idea is to take away the fancy map/gps UI and stick to a simple alarm system. The interface design is inspired by iOS 7's alarm app so that it looks and feels like a native app.  Backend uses sqlite3 db since it's pretty straightforward. And because of the amount of data (there are more than 3k unique stops!), I threw in multi-threading support to make time updates seamless.
+    <p></p>
+    Currently available in my github.
   </section>
 </section>
 
