@@ -38,34 +38,34 @@ ul li, ol li {
 
 @-webkit-keyframes fadeScene {
   0% {
-    background-image: url(../assets/clear.png); }
+    background-image: url("/assets/imgs/clear.png"); }
 
   100% {
     background-image: url(../assets/drawing.jpg); } }
 
 @-moz-keyframes fadeScene {
   0% {
-    background-image: url(../assets/clear.png); }
+    background-image: url("/assets/imgs/clear.png"); }
 
   100% {
     background-image: url(../assets/drawing.jpg); } }
 
 @-o-keyframes fadeScene {
   0% {
-    background-image: url(../assets/clear.png); }
+    background-image: url("/assets/imgs/clear.png"); }
 
   100% {
     background-image: url(../assets/drawing.jpg); } }
 
 @keyframes fadeScene {
   0% {
-    background-image: url(../assets/clear.png); }
+    background-image: url("/assets/imgs/clear.png"); }
 
   100% {
     background-image: url(../assets/drawing.jpg); } }
 
 .scene {
-  background-image: url(../assets/clear.png);
+  background-image: url("/assets/clear.png");
   position: fixed;
 }
 
