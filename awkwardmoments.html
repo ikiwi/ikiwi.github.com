@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-
+  
         <!-- Hammer reload -->
           <script>
             setInterval(function(){
@@ -15,11 +15,11 @@
                 ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
                 ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
                 ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length;i++) {
-                    var link = links[i];
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
                       link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
                     }
                   }
@@ -28,10 +28,10 @@
             }, 1000)
           </script>
         <!-- /Hammer reload -->
-
+      
 
   <link rel='stylesheet' href='css/normalize.css'>
-<link rel='stylesheet' href='css/style.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
   <script src='js/jquery-1.8.3.min.js'></script>
 <script src='js/app.js'></script>
 
@@ -57,7 +57,7 @@
             <a class="picture" href="/"><img src="assets/profile_picture.png"></a>
             <div class="icons">
               <a href="http://www.github.com/ikiwi"><img src="assets/github@2x.png"></a>
-              <a href="all.html"><img src="assets/blog@2x.png"></a>
+              <a class='current' href="all.html"><img src="assets/blog@2x.png"></a>
               <a href="resume.html"><img src="assets/resume@2x.png"></a>
               <p class="details">github blog resume</p>
             </div>
@@ -67,9 +67,9 @@
 
       <section class="content">
         <a href="all.html">all</a> |
-        <a href="tech.html">tech</a> |
-        <a href="re.html">real estate</a> |
-        <a class="current highlighted" href="awkwardmoments.html">life</a>
+        <a href="project.html">projects</a> |
+        <a href="sf.html">SF</a> |
+        <a class="current current highlighted" href="awkwardmoments.html">life</a>
         <section class="articles">
           <ul>
             <li>Oct 2013 <a href="2013curd.html">Deconstructed Fruit Pie</a></li>
