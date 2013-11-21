@@ -2,11 +2,7 @@
 
 html {
   height: 100%;
-  background: -webkit-linear-gradient(#061470, #6E8BD8);
-  background:    -moz-linear-gradient(#a1e048, #6a942f);
-  background:     -ms-linear-gradient(#a1e048, #6a942f);
-  background:      -o-linear-gradient(#a1e048, #6a942f);
-  background: linear-gradient(to bottom right, #061470, #6E8BD8);
+  background-color: #6E8BD8;
 }
 
 body {
@@ -37,6 +33,54 @@ img {
 ul li, ol li {
   line-height: 1.65em;
   padding: 0.2em 0; }
+
+/* scene */
+@-webkit-keyframes fadeScene {
+  0% {
+    background-image: url("assets/clear.png"); }
+
+  100% {
+    background-image: url("assets/drawing.jpg"); } }
+
+@-moz-keyframes fadeScene {
+  0% {
+    background-image: url("assets/clear.png"); }
+
+  100% {
+    background-image: url("assets/drawing.jpg"); } }
+
+@-o-keyframes fadeScene {
+  0% {
+    background-image: url("assets/clear.png"); }
+
+  100% {
+    background-image: url("assets/drawing.jpg"); } }
+
+@keyframes fadeScene {
+  0% {
+    background-image: url("assets/clear.png"); }
+
+  100% {
+    background-image: url("assets/drawing.jpg"); } }
+
+.scene {
+  background-image: url("assets/clear.png");
+  position: fixed;
+  .scene img {
+    opacity: 0; }
+    .scene .fade{
+    opacity: 0.95;
+    position: fixed;
+    background-image: -webkit-linear-gradient(#061470, #6E8BD8);
+    background-image:    -moz-linear-gradient(#a1e048, #6a942f);
+    background-image:     -ms-linear-gradient(#a1e048, #6a942f);
+    background-image:      -o-linear-gradient(#a1e048, #6a942f);
+    background-image: linear-gradient(to bottom right, #061470, #6E8BD8); }
+    .loaded .scene {
+    -webkit-animation: fadeScene 1s ease-in;
+    -moz-animation: fadeScene 1s ease-in;
+    animation: fadeScene 1s ease-in;
+    background-image: url("assets/drawing.jpg"); } }
 
 .wrap {
   font-family: "Helvetica Neue";
