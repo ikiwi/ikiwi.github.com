@@ -36,6 +36,39 @@ ul li, ol li {
   line-height: 1.65em;
   padding: 0.2em 0; }
 
+@-webkit-keyframes fadeScene {
+  0% {
+    background-image: url("/assets/imgs/clear.png"); }
+
+  100% {
+    background-image: url(../imgs/drawing.jpg); } }
+
+@-moz-keyframes fadeScene {
+  0% {
+    background-image: url("/assets/imgs/clear.png"); }
+
+  100% {
+    background-image: url(../imgs/drawing.jpg); } }
+
+@-o-keyframes fadeScene {
+  0% {
+    background-image: url("/assets/imgs/clear.png"); }
+
+  100% {
+    background-image: url(../imgs/drawing.jpg); } }
+
+@keyframes fadeScene {
+  0% {
+    background-image: url("/assets/imgs/clear.png"); }
+
+  100% {
+    background-image: url(../imgs/drawing.jpg); } }
+
+.scene {
+  background-image: url("/assets/clear.png");
+  position: fixed;
+}
+
 .wrap {
   font-family: "Helvetica Neue";
   position: relative;
