@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+  <link rel='stylesheet' href='css/normalize.css'>
+<link rel='stylesheet' href='assets/style.css'>
+  <script src='js/jquery-1.8.3.min.js'></script>
+<script src='js/app.js'></script>
+
+  <link href="favicon.ico" rel="shortcut icon">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="prettify.js"></script>
+  <title>Kalai Wei</title>
+
+</head>
+
+<body>
+    <div class = "wrap">
+      <header>
+        <section class="profile">
+          <h1 class="name"><a href="/">Kalai Wei</a></h1>
+          <div class="bio">
+            Baker + painter + system <br>
+            engineer venturing into <br>
+            Objective-C and Ruby.<br>
+            My life consists of many <br>
+            awkward silly moments.<br>
+            <a class="picture" href="/"><img src="assets/profile_picture.png"></a>
+            <section class="icons">
+            <ul>
+              <a href="index.html"><img src="assets/blog@2x.png"></a>
+              <a class='current' href="resume.html"><img src="assets/resume@2x.png"></a>
+              <a href="http://www.facebook.com/kalai.wei"><img src="assets/facebook@2x.png"></a>
+              <a href="http://www.github.com/ikiwi"><img src="assets/github@2x.png"></a>
+              <a href="http://www.twitter.com/kalaiwei"><img src="assets/twitter@2x.png"></a>
+            </ul>
+            <ul>
+              <p class="details">blog resume fb github twitter</p>
+            </ul>
+            </section>
+          </div>
+        </section>
+      </header>
+<section class="content">
+  <section class="articles">
+    <ul>education
+      <li>Polytechnic Institute of NYU</li>
+      <li>MS/BS in Computer Science</li>
+    </ul>
+    <p></p>
+    <ul>skills
+      <li>Programming Languages: C/C++, Perl, Shell scripts, objective-C, Ruby</li>
+      <li>Software: VMware ESX, vSphere, Virtual Center, xcode</li>
+      <li>Operating Systems: Linux, Windows, UNIX</li>
+    </ul>
+    <p></p>
+    <ul>experience
+      <ul>kernel developer @Violin Memory - Mountain View, CA
+        <li>developed block-level virtualization solutions (VAAI)</li>
+        <li>evaluated snapshot, replication, and deduplication performance</li>
+      </ul>
+      <p></p>
+      <ul>protocol engineer @NetApp - Sunnyvale, CA
+        <li>managed product release</li>
+      </ul>
+      <p></p>
+      <ul>storage developer @EMC Corporation - Soutboro, MA
+        <li>developed file-level virtualization solutions (VAAI)</li>
+      </ul>
+      <p></p>
+      <ul>infrastructure developer @EMC Corporation - South Plainfield, NJ
+        <li>developed internal tools (gdb), scripts, and infrastructure solutions</li>
+      </ul>
+      </ul>
+    </div>
+  </section>
+</section>
+    </div>
+  </body>
+</html>

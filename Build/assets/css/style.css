@@ -37,34 +37,34 @@ ul li, ol li {
 /* scene */
 @-webkit-keyframes fadeScene {
   0% {
-    background-image: url("assets/clear.png"); }
+    background-image: url(../clear.png); }
 
   100% {
-    background-image: url("assets/drawing.jpg"); } }
+    background-image: url(../drawing.jpg); } }
 
 @-moz-keyframes fadeScene {
   0% {
-    background-image: url("assets/clear.png"); }
+    background-image: url(../clear.png); }
 
   100% {
-    background-image: url("assets/drawing.jpg"); } }
+    background-image: url(../drawing.jpg); } }
 
 @-o-keyframes fadeScene {
   0% {
-    background-image: url("assets/clear.png"); }
+    background-image: url(../clear.png); }
 
   100% {
-    background-image: url("assets/drawing.jpg"); } }
+    background-image: url(../drawing.jpg); } }
 
 @keyframes fadeScene {
   0% {
-    background-image: url("assets/clear.png"); }
+    background-image: url(../clear.png); }
 
   100% {
-    background-image: url("assets/drawing.jpg"); } }
+    background-image: url(../drawing.jpg); } }
 
 .scene {
-  background-image: url("assets/clear.png");
+  background-image: url(../clear.png);
   position: fixed;
   .scene img {
     opacity: 0; }
@@ -80,7 +80,7 @@ ul li, ol li {
     -webkit-animation: fadeScene 1s ease-in;
     -moz-animation: fadeScene 1s ease-in;
     animation: fadeScene 1s ease-in;
-    background-image: url("assets/drawing.jpg"); } }
+    background-image: url(../drawing.jpg); } }
 
 .wrap {
   font-family: "Helvetica Neue";
