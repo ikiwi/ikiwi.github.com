@@ -35,34 +35,34 @@ ul li, ol li {
 /* scene */
 @-webkit-keyframes fadeScene {
   0% {
-    background-image: url("assets/clear.png"); }
+    background-image: url(../assets/clear.png); }
 
   100% {
     background-image: url(../assets/drawing.jpg); } }
 
 @-moz-keyframes fadeScene {
   0% {
-    background-image: url("assets/clear.png"); }
+    background-image: url(../assets/clear.png); }
 
   100% {
     background-image: url(../assets/drawing.jpg); } }
 
 @-o-keyframes fadeScene {
   0% {
-    background-image: url("assets/clear.png"); }
+    background-image: url(../assets/clear.png); }
 
   100% {
     background-image: url(../assets/drawing.jpg); } }
 
 @keyframes fadeScene {
   0% {
-    background-image: url("assets/clear.png"); }
+    background-image: url(../assets/clear.png); }
 
   100% {
     background-image: url(../assets/drawing.jpg); } }
 
 .scene {
-  background-image: url("assets/clear.png");
+  background-image: url(../assets/clear.png);
   position: fixed; }
   .scene .scene img {
     opacity: 0; }
