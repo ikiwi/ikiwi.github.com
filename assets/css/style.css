@@ -111,24 +111,21 @@ ul li, ol li {
 
 .wrap header .profile .bio .icons {
   position: absolute;
-  padding-top: 80px;
   float: left; }
 
 .wrap header .profile .bio .icons img {
   float: left;
-  margin-left: -30px;
-  margin-right: 45px;
-  margin-top: 20px;
+  margin: 22px;
   height: 22px;
   width: 22px;
+  padding-top: 100px;
   z-index: 3; }
 
 .wrap header .profile .bio .icons .details {
-  font-size: 10px;
-  margin-left: -33px;
-  float: left;
-  line-height: 1;
-  word-spacing: 6px; }
+  font-size: 12px;
+  margin-left: 10px;
+  line-height: 0;
+  word-spacing: 30px; }
 
 .wrap header .profile .bio .picture {
   background-image: -webkit-linear-gradient(top, #fafbfc, #e9ebf0);
@@ -143,7 +140,7 @@ ul li, ol li {
   border-radius: 90px;
   position: relative;
   padding-top: 10px;
-  margin-left: 50px;
+  margin-left: 60px;
   height: 90px;
   width: 90px;
   z-index: 5; }
@@ -165,7 +162,7 @@ ul li, ol li {
   min-width: 500px;
   padding: 0em 80px 5em 256px;
   position: relative;
-  z-index: 50; }
+  z-index: 101; }
 
 .wrap .content a.highlighted {
   color: #ff99dd;
