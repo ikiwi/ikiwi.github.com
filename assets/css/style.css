@@ -175,6 +175,9 @@ ul li, ol li {
           display: block;
           font-size: 22px;
           padding-bottom: 8px; }
+        .wrap .content .articles img {
+          margin-bottom: 25px;
+        }
     .wrap .content img {
       float:left;
       max-width: 100%; }
