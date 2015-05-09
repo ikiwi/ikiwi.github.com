@@ -1,4 +1,75 @@
-<!-- @include _header -->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+
+  <link rel='stylesheet' href='../css/normalize.css'>
+<link rel='stylesheet' href='../assets/style.css'>
+  <script src='../js/jquery-1.8.3.min.js'></script>
+<script src='../js/app.js'></script>
+
+  <link href="../favicon.ico" rel="shortcut icon">
+  <link href="../apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="prettify.css" type="text/css" rel="stylesheet" />
+  <script type="text/javascript" src="prettify.js"></script>
+  <title>Kalai Wei</title>
+
+</head>
+
+<body>
+    <div class = "wrap">
+      <header>
+        <section class="profile">
+          <h1 class="name"><a href="/">Kalai Wei</a></h1>
+          <div class="bio">
+            Baker + painter + system <br>
+            engineer venturing into <br>
+            Objective-C and Ruby.<br>
+            My life consists of many <br>
+            awkward silly moments.<br>
+            <a class="picture" href="/"><img src="assets/profile_picture@2x.png"></a>
+            <section class="icons">
+            <ul>
+              <a class='current-parent' href="index.html"><img src="assets/blog@2x.png"></a>
+              <a href="resume.html"><img src="assets/resume@2x.png"></a>
+              <a href="http://www.facebook.com/kalai.wei"><img src="assets/facebook@2x.png"></a>
+              <a href="http://www.github.com/ikiwi"><img src="assets/github@2x.png"></a>
+              <a href="http://www.twitter.com/kalaiwei"><img src="assets/twitter@2x.png"></a>
+            </ul>
+            <ul>
+              <p class="details">blog resume fb github twitter</p>
+            </ul>
+            </section>
+          </div>
+        </section>
+      </header>
 
       <section class="content">
         <section class="articles">
@@ -9,4 +80,6 @@ my first ios app
     </div>
 </body>
 
-<!-- @include _footer -->
+    </div>
+  </body>
+</html>

@@ -35,34 +35,34 @@ ul li, ol li {
 /* scene */
 @-webkit-keyframes fadeScene {
   0% {
-    background-image: url(clear.png); }
+    background-image: url(../assets/clear.png); }
 
   100% {
-    background-image: url(drawing.jpg); } }
+    background-image: url(../assets/drawing.jpg); } }
 
 @-moz-keyframes fadeScene {
   0% {
-    background-image: url(clear.png); }
+    background-image: url(../assets/clear.png); }
 
   100% {
-    background-image: url(drawing.jpg); } }
+    background-image: url(../assets/drawing.jpg); } }
 
 @-o-keyframes fadeScene {
   0% {
-    background-image: url(clear.png); }
+    background-image: url(../assets/clear.png); }
 
   100% {
-    background-image: url(drawing.jpg); } }
+    background-image: url(../assets/drawing.jpg); } }
 
 @keyframes fadeScene {
   0% {
-    background-image: url(clear.png); }
+    background-image: url(../assets/clear.png); }
 
   100% {
-    background-image: url(drawing.jpg); } }
+    background-image: url(../assets/drawing.jpg); } }
 
 .scene {
-  background-image: url(clear.png);
+  background-image: url(../assets/clear.png);
   position: fixed; }
   .scene .scene img {
     opacity: 0; }
@@ -78,7 +78,7 @@ ul li, ol li {
     -webkit-animation: fadeScene 1s ease-in;
     -moz-animation: fadeScene 1s ease-in;
     animation: fadeScene 1s ease-in;
-    background-image: url(drawing.jpg); }
+    background-image: url(../assets/drawing.jpg); }
 
 .wrap {
   font-family: "Helvetica Neue";
@@ -111,24 +111,21 @@ ul li, ol li {
 
 .wrap header .profile .bio .icons {
   position: absolute;
-  padding-top: 80px;
   float: left; }
 
 .wrap header .profile .bio .icons img {
   float: left;
-  margin-left: -30px;
-  margin-right: 45px;
-  margin-top: 20px;
+  margin: 22px;
   height: 22px;
   width: 22px;
+  padding-top: 100px;
   z-index: 3; }
 
 .wrap header .profile .bio .icons .details {
-  font-size: 10px;
-  margin-left: -33px;
-  float: left;
-  line-height: 1;
-  word-spacing: 6px; }
+  font-size: 12px;
+  margin-left: 10px;
+  line-height: 0;
+  word-spacing: 30px; }
 
 .wrap header .profile .bio .picture {
   background-image: -webkit-linear-gradient(top, #fafbfc, #e9ebf0);
@@ -143,7 +140,7 @@ ul li, ol li {
   border-radius: 90px;
   position: relative;
   padding-top: 10px;
-  margin-left: 50px;
+  margin-left: 60px;
   height: 90px;
   width: 90px;
   z-index: 5; }
